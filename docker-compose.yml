@@ -23,7 +23,7 @@ services:
       - /var/run/docker.sock:/var/run/docker.sock
     labels:
       - "traefik.http.routers.dash.rule=Host(`dash.docker.localhost`)"
-      - "dash.icon.color=#000000"
+      - "dash.icon.color=#AA0000"
       - "dash.icon.fa=fas fa-th-large"
   whoami:
     # A container that exposes an API to show its IP address
