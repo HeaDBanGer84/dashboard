@@ -1,0 +1,23 @@
+{
+	"title": "Your Homepage Title",
+	"items": [
+		{
+			"alt": "Github",
+			"color": "#24292E",
+			"icon": "fab fa-github",
+			"link": "https://github.com/"
+		},
+		{
+			"alt": "Twitter",
+			"color": "#1DA1F2",
+			"icon": "fab fa-twitter",
+			"link": "https://twitter.com/_"
+		},
+		{
+			"alt": "Docker Hub",
+			"color": "#30426A",
+			"icon": "fab fa-docker",
+			"link": "https://hub.docker.com/"
+		}
+	]
+}

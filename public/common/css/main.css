@@ -1,0 +1,101 @@
+html,
+body {
+	height: 100%;
+	width: 100%;
+	margin: 0;
+}
+
+body {
+	z-index: 1;
+	background-position: center;
+	background-attachment: fixed;
+	display: flex;
+	flex-flow: column;
+	justify-content: center;
+}
+
+h1 {
+	margin: 1em auto;
+	color: #fff;
+}
+
+.github-corner {
+	opacity: 0.4;
+}
+
+.github-corner:hover {
+	opacity: 1;
+}
+
+#wrapper {
+	display: grid;
+}
+
+#itemlist {
+	display: inline-grid;
+	grid-template-columns: repeat(2, 1fr);
+	margin: auto;
+}
+
+@media only screen and (min-width: 600px) {
+	#itemlist {
+		grid-template-columns: repeat(3, 1fr);
+	}
+}
+
+@media only screen and (min-width: 800px) {
+	#itemlist {
+		grid-template-columns: repeat(4, 1fr);
+	}
+}
+
+@media only screen and (min-width: 1020px) {
+	#itemlist {
+		grid-template-columns: repeat(6, 1fr);
+	}
+}
+
+#itemlist {
+	border-radius: 6px;
+	/* background-color: rgba(0, 0, 0, .4); */
+	font-size: 4em;
+}
+
+#itemlist>* {
+	padding: 15px;
+	margin: 0 auto;
+}
+
+
+
+
+/* link colors */
+#itemlist a {
+	color: #333;
+	background-color: #fff;
+	margin: 10px;
+	/* Add shadows to create the "card" effect */
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+	transition: 0.3s;
+	font-size: 0.2em;
+	padding: 2px 16px 0.7em;
+	text-decoration: none;
+	
+	text-align: center;
+}
+
+#itemlist a:hover {
+	box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+	color: #c4c4c4;
+}
+
+#itemlist a i{
+	font-size: 5em;
+	padding: 20px;
+}
+
+#itemlist a>* {
+	display: block;
+	margin: 0 auto;
+}
+
