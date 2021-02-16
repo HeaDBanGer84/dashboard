@@ -15,10 +15,17 @@ app.get('/', (req, res) => {
             containers.forEach(function (containerInfo) {
                 console.log(containerInfo.Id)
                 let composeService = containerInfo.Labels['com.docker.compose.service'];
+                let extractedURL = containerInfo.Labels['traefik.http.routers.' + composeService + '.rule'];
+                const regex = /^Host\(\`(.*)\`\)/gm;
+
+                let match = regex.exec(extractedURL)
+                if(match){
+                    extractedURL=match[1]
+                }
                 resp.push({
                     //"containerInfo": containerInfo,
                     "name": composeService,
-                    "url": containerInfo.Labels['traefik.http.routers.' + composeService + '.rule']
+                    "url": "http://"+extractedURL
                 })
             });
         }
