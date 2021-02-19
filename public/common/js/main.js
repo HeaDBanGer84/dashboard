@@ -19,9 +19,9 @@ function addTriangleTo(target) {
 
     target.style['background-image'] = 'url(' + pattern.png() + ')';
     target.style['background-size'] = 'cover';
-    target.style['-webkit-background-size'] = 'cover';
-    target.style['-moz-background-size'] = 'cover';
-    target.style['-o-background-size'] = 'cover';
+    // target.style['-webkit-background-size'] = 'cover';
+    // target.style['-moz-background-size'] = 'cover';
+    // target.style['-o-background-size'] = 'cover';
 }
 
 var resizeTimer;
