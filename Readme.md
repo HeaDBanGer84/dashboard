@@ -1,4 +1,4 @@
-Run Dashboard
+# Run Dashboard
 
 Add to your `/etc/hosts`
 
@@ -13,3 +13,7 @@ docker-compose -f "docker-compose.yml" up -d --build
 ```
 
 Visit <http://dash.docker.localhost/> in your Browser
+
+# Credits 
+
+inspired by <https://github.com/kutyla-philipp/simple-dash>
