@@ -18,6 +18,7 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
+    image: headbanger84/dashboard
     volumes:
       # So that Traefik can listen to the Docker events
       - /var/run/docker.sock:/var/run/docker.sock
@@ -29,4 +30,5 @@ services:
     # A container that exposes an API to show its IP address
     image: traefik/whoami
     labels:
+      - "dash.enabled=true"
       - "traefik.http.routers.whoami.rule=Host(`whoami.docker.localhost`)"

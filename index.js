@@ -15,9 +15,11 @@ app.get('/config', (req, res) => {
         let resp = []
         if (containers) {
             containers.forEach(function (containerInfo) {
-                if (String.prototype.toLocaleLowerCase(containerInfo.Labels['dash.enabled']) !== 'false') {
+                let dashEnabled=new String(containerInfo.Labels["dash.enabled"]).toLowerCase();
+                let composeService = containerInfo.Labels['com.docker.compose.service'];
+                console.log(composeService+': '+dashEnabled);
+                if(dashEnabled !== 'false') {
 
-                    let composeService = containerInfo.Labels['com.docker.compose.service'];
                     let extractedURL = containerInfo.Labels['traefik.http.routers.' + composeService + '.rule'];
                     let dashUrl = containerInfo.Labels['dash.url'] ?? '';
                     let group = containerInfo.Labels['com.docker.compose.project'] ?? undefined;
